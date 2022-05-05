@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="tabs">
+      	<div class="container">
+	         <div class="tabs-main">
+	            <ul class="tabs-nav">
+	               <li><a href="#tab-1">Step 1</a></li>
+	               <li><a href="#tab-2">Step 2</a></li>
+	               <li><a href="#tab-3">Step 3</a></li>
+	            </ul>
+	         </div>
+	         <div class="tabs-stage">
+	            <div id="tab-1" class="tabbing">
+	               <div class="tab-title">
+	                  <h2>Allgemeine Information</h2>
+	               </div>
+	               <div class="tab-inner">
+	                  <div class="stand-main">
+	                     <h3>Standortwahlen</h3>
+	                     <input type="text" placeholder="PLZ">
+	                     <div class="common-btn">
+	                        <button>Weiter</button>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
+	            <div id="tab-2" class="tabbing">
+	               <div class="tab-title">
+	                  <h2>Allgemeine Information</h2>
+	               </div>
+	               <div class="tab-inner">
+	                  <h3>Welchen Energieverbrauch hat lhr Gebaude heute?</h3>
+	                  <form action="#" class="common-radio-design">
+	                     <p>
+	                        <input type="radio" id="ich" name="radio-group" checked>
+	                        <label for="ich">Ich kenne den Verbranch und mochte ihn direkt eingeben</label>
+	                     </p>
+	                     <p>
+	                        <input type="radio" id="nich" name="radio-group">
+	                        <label for="nich">Ich kenne den Verbranch nich und mochte ihn anhand der Flache und des Baustandards grob abschatzen</label>
+	                     </p>
+	                  </form>
+	                  <div class="main">
+	                     <div class="col-3">
+	                        <div class="toggle-section">
+	                           <h2>Heiztechnologie<span><img src="down-arrow.png" alt="#"></span></h2>
+	                           <ul>
+	                              <li>
+	                                 <span>Biogas (kWh)</span>
+	                              </li>
+	                              <li>
+	                                 <span>Erdgas (kWh)</span>
+	                              </li>
+	                              <li>
+	                                 <span>Fernwarne (kWh)</span>
+	                              </li>
+	                           </ul>
+	                        </div>
+	                     </div>
+	                     <div class="col-3">
+	                        <h2>Baustandard</h2>
+	                        <form action="#" class="common-radio-design">
+	                           <p>
+	                              <input type="radio" id="jahre" name="radio-group">
+	                              <label for="jahre">Alter als 30 jahre und unsaniert</label>
+	                           </p>
+	                           <p>
+	                              <input type="radio" id="aber" name="radio-group">
+	                              <label for="aber">Alter aber saniert</label>
+	                           </p>
+	                           <p>
+	                              <input type="radio" id="stark" name="radio-group">
+	                              <label for="stark">Neu oder stark modernisiert</label>
+	                           </p>
+	                           <p>
+	                              <input type="radio" id="generg" name="radio-group">
+	                              <label for="generg">Niedrigenergiehaus</label>
+	                           </p>
+	                        </form>
+	                     </div>
+	                     <div class="col-3">
+	                        <h2>Quadratmeter</h2>
+	                        <div class="number">
+	                           <span class="minus">-</span>
+	                           <input type="text" value="1"/>
+	                           <span class="plus">+</span>
+	                        </div>
+	                         <div class="common-btn">
+		                        <button>Weiter</button>
+		                     </div>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
+	            <div id="tab-3" class="tabbing">
+	               <div class="tab-title">
+	                  <h2>Allgemeine Information</h2>
+	               </div>
+	               <div class="tab-inner">
+	                  <h3>Welchen Energieverbrauch hat lhr Gebaude heute?</h3>
+	                  <form action="#" class="common-radio-design">
+	                     <p>
+	                        <input type="radio" id="fassade" name="radio-group" checked>
+	                        <label for="fassade">Fassade</label>
+	                     </p>
+	                     <p>
+	                        <input type="radio" id="Dach" name="radio-group">
+	                        <label for="Dach">Dach</label>
+	                     </p>
+	                     <p>
+	                        <input type="radio" id="keller" name="radio-group">
+	                        <label for="keller">Keller</label>
+	                     </p>
+	                  </form>
+	                    <div class="tab-title">
+		                  <h2>Damm Intensitat</h2>
+		                </div>
+		                <div class="bottom-tabbing">
+		                	<div class="left-section">
+		                		
+		                		<div class="dunn-tabs-main">
+						            <ul class="bottom-tabs-nav">
+						               <li class=""><a href="#">dunn</a></li>
+						               <li><a href="#">mitel</a></li>
+						               <li class="tab-active"><a href="#">maximal</a></li>
+						            </ul>
+						         </div>
+
+		                	</div>
+		                	<div class="right-section">
+		                		<div class="common-btn">
+			                        <button>Weiter</button>
+			                     </div>
+		                	</div>
+		                </div> 
+	               </div>
+	            </div>
+	         </div>
+         </div>
+      </div>
+      <script>
+         // Show the first tab by default
+         $('.tabs-stage .tabbing').hide();
+         $('.tabs-stage .tabbing:first').show();
+         $('.tabs-nav li:first').addClass('tab-active');
+         
+         // Change tab class and display content
+         $('.tabs-nav a').on('click', function(event){
+           event.preventDefault();
+           $('.tabs-nav li').removeClass('tab-active');
+           $(this).parent().addClass('tab-active');
+           $('.tabs-stage .tabbing').hide();
+           $($(this).attr('href')).show();
+         });
+         
+         
+         	$(document).ready(function() {
+         	$('.minus').click(function () {
+         		var $input = $(this).parent().find('input');
+         		var count = parseInt($input.val()) - 1;
+         		count = count < 1 ? 1 : count;
+         		$input.val(count);
+         		$input.change();
+         		return false;
+         	});
+         	$('.plus').click(function () {
+         		var $input = $(this).parent().find('input');
+         		$input.val(parseInt($input.val()) + 1);
+         		$input.change();
+         		return false;
+         	});
+
+         	$('.toggle-section span').click(function () {
+                $(this).parents('.toggle-section').toggleClass('active');
+         	});
+         });
+         
+      </script>
+   </body>
+</html>
